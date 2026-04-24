@@ -1,20 +1,3 @@
-// Preloader
-window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
-    if (loader) {
-        setTimeout(() => {
-            loader.classList.add('fade-out');
-        }, 1000);
-    }
-});
-
-// Safety fallback for preloader
-setTimeout(() => {
-    const loader = document.getElementById('loader');
-    if (loader && !loader.classList.contains('fade-out')) {
-        loader.classList.add('fade-out');
-    }
-}, 5000);
 
 // Cursor Glow
 const cursorGlow = document.getElementById('cursor-glow');
