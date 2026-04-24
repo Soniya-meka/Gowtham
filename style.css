@@ -967,12 +967,104 @@ input:focus, textarea:focus {
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .contact-wrapper { grid-template-columns: 1fr; padding: 2rem; }
     .split-layout { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+    .container { padding: 0 1.5rem; }
+    
+    .menu-toggle { 
+        display: block; 
+        color: var(--primary);
+        z-index: 1002;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        padding: 80px 2rem;
+        transition: var(--transition);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        z-index: 1001;
+        align-items: flex-start;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hero {
+        padding-top: 40px;
+        text-align: center;
+        min-height: auto;
+    }
+
+    main {
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        padding: 3rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+    }
+
+    .logo-text span {
+        font-size: 0.7rem;
+    }
+
+    .logo-img {
+        height: 40px !important;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
 }
 
 @media (max-width: 576px) {
     .footer-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
-    .hero h1 { font-size: 3rem; }
+    .hero h1 { font-size: 1.8rem; }
     .input-group { grid-template-columns: 1fr; }
-    .section-title { font-size: 2.2rem; }
+    .section-title { font-size: 1.8rem; }
+    
+    .news-ticker {
+        font-size: 0.7rem;
+        padding: 8px 0;
+    }
+    
+    .glass-navbar {
+        top: 36px; /* Adjust for smaller ticker */
+    }
 }
